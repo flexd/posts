@@ -96,7 +96,7 @@ func ShowPost(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 The `renderTemplate` function is a handy helper from [Matt Silverlock (@elithrar)](https://elithrar.github.io)'s post about `html/template`. It is a good read, read it [here](https://elithrar.github.io/article/approximating-html-template-inheritance/).
 
-I have only modified it slightly to add HTML Minification with [github.com/tdewolff/minify](github.com/tdewolff/minify)
+I have only modified it slightly to add HTML Minification with [github.com/tdewolff/minify](https://github.com/tdewolff/minify)
 ```go
  func renderTemplate(w http.ResponseWriter, name string, data map[string]interface{}) {
     ... // Rest of function here

@@ -123,7 +123,7 @@ Looking at the data in Grafana I can get nice graphs like this, for any timespan
 
 
 The only big question that remains is why the Node app was using so much memory.
-I gave it more memory and let it sit without any traffic for a few days, and it still managed to use up all the available memory. There has to be some kind of leak somewhere, I'll investigate some more.
+I gave it more memory and let it sit without any traffic for a few days, and it still managed to use up all the available memory.
 
 When I have time I am going to figure out why, but that will come as an update post later.
 

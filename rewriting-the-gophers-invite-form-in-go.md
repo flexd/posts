@@ -14,6 +14,8 @@ For those of you who have not seen slackin before, it looks something like this:
 ![gophersinvite slackin](https://s.flexd.net/website-uploads/rewriting-the-gophers-invite-form-in-go/gophersinvite.png)
 </center>
 
+If you want to join us on Slack, visit the [invite form](https://invite.slack.golangbridge.org) to get invited! 
+
 At the time I started writing this post the invite page was hosted on the [Heroku](https://heroku.com) free tier, mostly because I was lazy and there was a nice shiny "Deploy to Heroku"-button in the slackin README.
 
 For the amounts of traffic the website gets, this should not have been be a problem. But `slackin` is written in Node.js, and somehow it was regularily using 200% of the allowed RAM. I would get lots of emails warning me, and the app would get killed by the OOM-killer.

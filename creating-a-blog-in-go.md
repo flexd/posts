@@ -1,5 +1,5 @@
 ---
-title: Creating a website/blog in Go, 10 easy steps.
+title: Creating a website/blog in Go
 slug: creating-a-blog-in-go
 published: true
 posted: 2016-04-21
@@ -16,7 +16,9 @@ I can't do that with an entirely static website, and while I could probably get 
 
 Yes, I know. One more! But it's my website, so whatever.
 
-This is a really simple website, the `main.go` file is about 40 lines long, and the web package is about 200 lines long, including a bunch of helpers that could have been their own package.
+## This is a really simple website.
+
+`main.go` is about 40 lines long, and the web package is about 200 lines long, including a bunch of helpers that could have been their own package.
 
 ```go
 package main
@@ -61,6 +63,7 @@ This is really a example of how elegant a web application in Go can be. I'm sure
 
 I am using the [httprouter](https://github.com/julienschmidt/httprouter) package here, because I wanted to try it out, but the `net/http` mux is usually good enough for most things, you just need a bit more boilerplate code.
 
+## Middleware
 `httpLogger` is an example of HTTP Middleware in Go. It uses the log package to print a line per request, and outputs this per request>
 
 `2016/04/21 10:09:23 request: 188.166.60.190:40264 GET /post/creating-a-blog-in-go/ 352.423µs`
@@ -68,6 +71,7 @@ I am using the [httprouter](https://github.com/julienschmidt/httprouter) package
 And that is all it does. You could easily write middleware to handle authentication, or set a custom HTTP Header, or do whatever you wish.
 [Alex Edwards](https://twitter.com/ajmedwards) has written an [excellent guide](http://www.alexedwards.net/blog/making-and-using-middleware) about this on his blog.
 
+## Handlers
 The `web` package holds the web handlers (for lack of a better name), there are only two. One renders the index page, and the other renders a single post.
 
 ```go
@@ -117,6 +121,7 @@ I have only modified it slightly to add HTML Minification with [github.com/tdewo
 
 That probably is not the best way to do it, but it works for now. I'm thinking about writing a Caddy extension to do the minifying there.
 
+## Templating
 Matt also suggests reading [Jan Newmarch's html/template tutorial](http://jan.newmarch.name/golang/template/chapter-template.html), which covers the basics of `html/template`. Also a good read!
 
 We can take a look at the templates. This is `post.tmpl`, the template that shows you a single post.

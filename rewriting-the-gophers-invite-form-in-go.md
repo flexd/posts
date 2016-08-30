@@ -26,13 +26,18 @@ This was a problem for us, because whenever the form stops working, people can't
 In his 2008 blog post 'Hardware is Cheap, Programmers are Expensive', Jeff Atwood said
 
 > Given the rapid advance of Moore's Law, when does it make sense to throw hardware at a programming problem? As a general rule, I'd say almost always.
+> -- <cite>[Jeff Atwood][1]</cite>
+[1]:https://blog.codinghorror.com/hardware-is-cheap-programmers-are-expensive/
 
 It's the typical IT answer. It's efficient enough, just buy more servers!
 We could have upgraded to a beefier dyno with enough memory, but that would not have solved anything if the node application had a memory leak causing it to use more memory. And I am not a fan of Javascript at all.
 
 Since I had wanted to rewrite everything in Go for a long time, I took this as an opportunity to do just that, and here we are!
 
-> "Most people miss Opportunity because it is dressed in overalls and looks like work." Thomas A. Edison
+
+> Most people miss Opportunity because it is dressed in overalls and looks like work.
+> -- <cite>[Thomas Edison][2]</cite>
+[2]:http://www.quotedb.com/quotes/1375
 
 I spent some time earlier this year integrating [ReCaptcha](https://www.google.com/recaptcha/intro/index.html), so I was already semi-familiar with the slackin code base, and I had a good idea of what needed to be done, so I just started writing a backend in Go, figuring I'd steal the entire frontend and that bit would require minimal changes.
 It is not a complicated website. All we need is a form, and something that parses that form, and something to validate the recaptcha, and make calls to the Slack API.

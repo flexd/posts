@@ -1,7 +1,7 @@
 ---
 title: Creating a website/blog in Go
 slug: creating-a-blog-in-go
-published: true
+published: false
 posted: 2016-04-21
 updated: 2016-04-21
 ---

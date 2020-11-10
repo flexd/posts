@@ -1,5 +1,5 @@
 ---
-title: Still alive
+title: Still alive, and the domain is not for sale :)
 slug: still-alive
 published: true
 posted: 2020-09-03
